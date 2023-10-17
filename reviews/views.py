@@ -19,6 +19,5 @@ def review(request):
     })
 
 
-
 def thank_you(request):
     return render(request, 'reviews/thank_you.html')

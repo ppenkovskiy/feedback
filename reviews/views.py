@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, request
 from .forms import ReviewForm
 from django.views import View
 
@@ -22,5 +22,6 @@ class ReviewView(View):
         })
 
 
-def thank_you(request):
-    return render(request, 'reviews/thank_you.html')
+class ThankYouView(View):
+    def get(self, request):
+        return render(request, 'reviews/thank_you.html')

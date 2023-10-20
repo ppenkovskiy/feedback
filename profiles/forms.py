@@ -2,4 +2,4 @@ from django import forms
 
 
 class ProfileForm(forms.Form):
-    image = forms.FileField()
+    user_image = forms.FileField()

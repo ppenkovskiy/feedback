@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+# This model only stores the path to the file on the hard drive
+class UserProfile(models.Model):
+    image = models.FileField(upload_to='images')
+
